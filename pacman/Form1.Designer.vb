@@ -30,6 +30,7 @@ Partial Class Form1
         Me.path2 = New System.Windows.Forms.PictureBox()
         Me.path3 = New System.Windows.Forms.PictureBox()
         Me.intersec1 = New System.Windows.Forms.PictureBox()
+        Me.intersecTimer = New System.Windows.Forms.Timer(Me.components)
         CType(Me.path1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pacman, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pacmanImage, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,11 +90,14 @@ Partial Class Form1
         'intersec1
         '
         Me.intersec1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.intersec1.Location = New System.Drawing.Point(345, 295)
+        Me.intersec1.Location = New System.Drawing.Point(347, 300)
         Me.intersec1.Name = "intersec1"
-        Me.intersec1.Size = New System.Drawing.Size(10, 10)
+        Me.intersec1.Size = New System.Drawing.Size(7, 1)
         Me.intersec1.TabIndex = 34
         Me.intersec1.TabStop = False
+        '
+        'intersecTimer
+        '
         '
         'Form1
         '
@@ -125,4 +129,5 @@ Partial Class Form1
     Friend WithEvents path2 As PictureBox
     Friend WithEvents path3 As PictureBox
     Friend WithEvents intersec1 As PictureBox
+    Friend WithEvents intersecTimer As Timer
 End Class

@@ -8,6 +8,7 @@ Public Class Form1
         Timer.Start()
         direction = "Right"
         paths = {path1, path2, path3}
+        intersecs = {itersec1}
         onPath = False
     End Sub
 
@@ -41,6 +42,12 @@ Public Class Form1
         ElseIf direction = "Down" Then
             moveDown()
         End If
+
+        For Each intersec In intersecs
+            If pacman.Bounds.IntersectsWith(intesec.Bounds) = True Then
+                checkIntersec()
+            End If
+        Next
     End Sub
 
     Sub moveRight()
@@ -110,7 +117,43 @@ Public Class Form1
 
     Sub checkIntersec()
         If pacman.Bounds.IntersectsWith(intersec1.Bounds) Then
-
+            Timer.Stop()
+            intersecTimer.Start()
+            If pacman.Left = 347 Then
+                intersecKey = "Right"
+            ElseIf pacman.Left = 353 Then
+                intersecKey = "Left"
+            End If
         End If
+    End Sub
+
+    Private Sub intersecTimer_Tick(sender As Object, e As EventArgs) Handles intersecTimer.Tick
+
+        If intersecTick < 4 Then
+            If intersecKey = "Right" Then
+                pacman.Left += 1
+                pacmanImage.Top = pacman.Top - 15
+                pacmanImage.Left = pacman.Left - 15
+            ElseIf intersecKey = "Left" Then
+                pacman.Left -= 1
+                pacmanImage.Top = pacman.Top - 15
+                pacmanImage.Left = pacman.Left - 15
+            ElseIf intersecKey = "Up" Then
+                pacman.Top -= 1
+                pacmanImage.Top = pacman.Top - 15
+                pacmanImage.Left = pacman.Left - 15
+            ElseIf intersecKey = "Down" Then
+                pacman.Top += 1
+                pacmanImage.Top = pacman.Top - 15
+                pacmanImage.Left = pacman.Left - 15
+            End If
+            intersecTick += 1
+        Else intersecComplete()
+        End If
+    End Sub
+
+    Sub intersecComplete()
+        intersecTimer.Stop()
+        direction = "Up"
     End Sub
 End Class
