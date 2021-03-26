@@ -22,3 +22,15 @@ H:\Documents\Extra curricular\pacman\bin\Debug\pacman.xml
 H:\Documents\Extra curricular\pacman\obj\Debug\pacman.exe
 H:\Documents\Extra curricular\pacman\obj\Debug\pacman.xml
 H:\Documents\Extra curricular\pacman\obj\Debug\pacman.pdb
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.vbprojAssemblyReference.cache
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.Form1.resources
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.Resources.resources
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.vbproj.GenerateResource.cache
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.vbproj.CoreCompileInputs.cache
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.exe
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.xml
+C:\Users\Children games\Documents\GitHub\pacman\pacman\obj\Debug\pacman.pdb
+C:\Users\Children games\Documents\GitHub\pacman\pacman\bin\Debug\pacman.exe.config
+C:\Users\Children games\Documents\GitHub\pacman\pacman\bin\Debug\pacman.exe
+C:\Users\Children games\Documents\GitHub\pacman\pacman\bin\Debug\pacman.pdb
+C:\Users\Children games\Documents\GitHub\pacman\pacman\bin\Debug\pacman.xml

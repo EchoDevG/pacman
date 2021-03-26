@@ -8,7 +8,7 @@ Public Class Form1
         Timer.Start()
         direction = "Right"
         paths = {path1, path2, path3}
-        intersecs = {itersec1}
+        intersecs = {intersec1}
         onPath = False
     End Sub
 
@@ -44,7 +44,7 @@ Public Class Form1
         End If
 
         For Each intersec In intersecs
-            If pacman.Bounds.IntersectsWith(intesec.Bounds) = True Then
+            If pacman.Bounds.IntersectsWith(intersec.Bounds) = True Then
                 checkIntersec()
             End If
         Next
@@ -118,7 +118,9 @@ Public Class Form1
     Sub checkIntersec()
         If pacman.Bounds.IntersectsWith(intersec1.Bounds) Then
             Timer.Stop()
+            intersecTimer.Interval = 10
             intersecTimer.Start()
+            direction = "Up"
             If pacman.Left = 347 Then
                 intersecKey = "Right"
             ElseIf pacman.Left = 353 Then
@@ -154,6 +156,6 @@ Public Class Form1
 
     Sub intersecComplete()
         intersecTimer.Stop()
-        direction = "Up"
+        Timer.Start()
     End Sub
 End Class
